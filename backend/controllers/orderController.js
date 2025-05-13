@@ -123,7 +123,7 @@ const placeOrderCod = async (req, res) => {
         await newOrder.save();
         await userModel.findByIdAndUpdate(req.body.userId, { cartData: {} });
 
-        res.json({ success: true, message: "Order Placed" });
+        res.json({ success: true, message: "To Place Order scan QRcode" });
 
     } catch (error) {
         console.log(error);

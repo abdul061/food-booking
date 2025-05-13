@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
@@ -13,8 +13,10 @@
     "@stripe/stripe-js": "^3.0.3",
     "axios": "^1.6.7",
     "jwt-decode": "^4.0.0",
+    "qrcode.react": "^4.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-qr-code": "^2.0.15",
     "react-router-dom": "^6.22.0",
     "react-toastify": "^10.0.4"
   },

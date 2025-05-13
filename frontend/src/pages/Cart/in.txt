@@ -1,0 +1,16 @@
+  const [PromoCode , SetPromoCode ] = useState('');
+  const handlePromoSubmit = async () => {
+    try {
+      const response = await axios.post('http://localhost:4000/api/order/validate-promo', { promoCode });
+      if (response.data.success) {
+        setDiscount(response.data.discountAmount);  // Apply discount
+        setError('');
+        // Update promo code state to used (you can add additional logic to disable input or show "used")
+        alert(Promo code applied! You get ₹${response.data.discountAmount} off.);
+      } else {
+        setError('Invalid promo code.');
+      }
+    } catch (error) {
+      setError('Error validating promo code.');
+    }
+  };

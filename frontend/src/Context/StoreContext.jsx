@@ -10,7 +10,7 @@ const StoreContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
   const [token, setToken] = useState("");
   const currency = "₹";
-  const deliveryCharge = 50;
+  const deliveryCharge = 100;
 
   const addToCart = async (itemId) => {
     setCartItems((prev) => ({
@@ -25,7 +25,7 @@ const StoreContextProvider = (props) => {
   const removeFromCart = async (itemId) => {
     setCartItems((prev) => ({
       ...prev,
-      [itemId]: prev[itemId] - 1,
+      [itemId]: prev[itemId] - prev[itemId],
     }));
     if (token) {
       await axios.post(url + "/api/cart/remove", { itemId }, { headers: { token } });

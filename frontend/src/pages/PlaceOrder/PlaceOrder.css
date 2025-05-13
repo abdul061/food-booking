@@ -68,3 +68,6 @@
         flex-direction: column;
     }
 }
+label{
+    color: #968e8e;
+}

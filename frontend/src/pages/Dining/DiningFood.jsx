@@ -203,10 +203,10 @@ const DiningFood = () => {
                 </div>
                 <div className="payment">
                     <h2>Payment Method</h2>
-                    <div onClick={() => setPayment("cod")} className="payment-option">
+                    {/* <div onClick={() => setPayment("cod")} className="payment-option">
                         <img src={payment === "cod" ? assets.checked : assets.un_checked} alt="" />
                         <p>COD ( Cash on Dining )</p>
-                    </div>
+                    </div> */}
                     <div onClick={() => setPayment("stripe")} className="payment-option">
                         <img src={payment === "stripe" ? assets.checked : assets.un_checked} alt="" />
                         <p>Stripe ( Credit / Debit )</p>

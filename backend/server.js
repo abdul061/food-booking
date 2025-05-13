@@ -31,8 +31,8 @@ app.use("/api/order",orderRouter)
 app.get("/", (req, res) => {
     res.send("API Working")
   });
-//   cron.schedule("* * * * *", () => {
-//     console.log("🔍 Running delivery check...");
-//     checkOrders();
-// });
+  cron.schedule("* * * * *", () => {
+    console.log("🔍 Running delivery check...");
+    checkOrders();
+});
 app.listen(port, () => console.log(`Server started on http://localhost:${port}`))
