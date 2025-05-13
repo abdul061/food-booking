@@ -1,0 +1,90 @@
+.place-order{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 50px;
+    margin: 100px 0px;
+}
+.place-order-left{
+    width: 100%;
+    max-width: max(30%,500px);
+}
+.place-order-left .title{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+.place-order-left input{
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #C5C5C5;
+    border-radius: 4px;
+    outline-color: tomato;
+}
+.place-order-left .multi-field{
+    display: flex;
+    gap: 10px;
+}
+.place-order-right{
+    width: 100%;
+    max-width: max(40%,500px);
+}
+.place-order-submit{
+    margin-top: 50px;
+    border: none;
+    background-color: tomato;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.payment{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+}
+.payment h2{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.payment .payment-option{
+    display: flex;
+    align-items: center;
+    gap: 10px ;
+    border: 1px solid tomato;
+    padding: 15px;
+    border-radius: 4px;
+    min-width: 300px;
+    cursor: pointer;
+}
+.payment .payment-option:hover{
+    background-color:  #ffe7de;
+}
+
+@media (max-width:700px) {
+    .place-order{
+        flex-direction: column;
+    }
+}
+.multi-field select {
+    width: 100%;          /* Ensures the select box takes the full width of its container */
+    padding: 8px 12px;    /* Adds some padding for better readability */
+    font-size: 16px;      /* Adjusts the font size */
+    border: 1px solid #ccc; /* Light border color */
+    border-radius: 4px;   /* Rounded corners */
+    background-color: #fff; /* White background */
+    color: #333;          /* Dark text for contrast */
+    transition: border-color 0.3s ease; /* Smooth transition on focus */
+    margin-bottom: 20px;
+}
+
+.multi-field select:focus {
+    border-color: #007BFF; /* Blue border on focus */
+    outline: none;         /* Removes default outline */
+}
+
+.multi-field select option {
+    padding: 10px; /* Adds padding to each option */
+}
