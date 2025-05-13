@@ -114,7 +114,7 @@ const PlaceOrder = () => {
     return (
         <form onSubmit={placeOrder} className='place-order'>
 <div className="place-order-left">
-    <p className='title'>Delivery Information</p>
+    <p className='title'>User Information</p>
 
     <div className="multi-field">
         <input type="text" name='firstName' onChange={onChangeHandler} value={data.firstName} placeholder='First name' required />
@@ -172,7 +172,7 @@ const PlaceOrder = () => {
                     <h2>Payment Method</h2>
                     <div onClick={() => setPayment("cod")} className="payment-option">
                         <img src={payment === "cod" ? assets.checked : assets.un_checked} alt="" />
-                        <p>COD ( Cash on delivery )</p>
+                        <p>Cash</p>
                     </div>
                     <div onClick={() => setPayment("stripe")} className="payment-option">
                         <img src={payment === "stripe" ? assets.checked : assets.un_checked} alt="" />
